@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    text-decoration: none;
+}
+
+.navbar, .home, .why-us, .games-genre, .best-seller, .popular-games, .content, .footer-content{
+    max-width: 1280px;
+    margin: auto;
+}
+
+body {
+    background-color: #F5F4F9;
+}
+
+header {
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    & .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0px;
+
+        & nav {
+            display: flex;
+            gap: 40px;
+
+            & a {
+                color: #efefefb2;
+                font-size: 18px;
+            }
+
+            & a:first-child {
+                color: white;
+            }
+        }
+
+        & .btns {
+            display: flex;
+            gap: 16px;
+
+            & button {
+                padding: 12px 16px;
+                border-radius: 8px;
+                border: none;
+                background-color: #3B44F6;
+                color: white;
+                cursor: pointer;
+            }
+
+            & button:last-child {
+                background-color: transparent;
+                border: white 1px solid;
+            }
+        }
+    }
+
+    & .home {
+        margin-top: 114px;
+        height: calc(100vh - 188px);
+
+        & .title {
+            margin-bottom: 64px;
+            color: white;
+
+            & h1 {
+                font-size: 48px;
+                margin-bottom: 26px;
+            }
+
+            & p {
+                font-size: 24px;
+                max-width: 400px;
+            }
+        }
+
+        & button {
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            background-color: #3B44F6;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
+}
+
+main {
+    & .why-us {
+        margin-top: 70px;
+        
+        & #title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+
+            & h1 {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            & p {
+                font-size: 16px;
+                max-width: 473px;
+                text-align: center;
+            }
+        }
+
+        & #cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 83px;
+            margin-top: 60px;
+            margin-bottom: 70px;
+
+            & .card {
+                & img {
+                    padding: 0px 70px;
+                }
+
+                & p {
+                    max-width: 200px;
+                    text-align: center;
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+
+    & .games-genre{
+        margin-bottom: 40px;
+
+        & .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+
+            & h1 {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            & a {
+                font-size: 18px;
+                font-weight: 500;
+                color: #3B44F6;
+            }
+        }
+
+        & #cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    & .best-seller {
+        margin-top: 40px;
+        & h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        & #cards {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 54px;
+            max-width: 1280px;
+            flex-wrap: wrap;
+
+            & .game-card {
+                width: 262px;
+                height: 340px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0px 8px 10px #6b6b6b12;
+                border: 0.3px solid #ececec;
+
+                & img {
+                    padding: 16px;
+                }
+
+                & .infos {
+                    padding: 0px 16px 24px 16px;
+
+                    & #name {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    & .price {
+                        margin-top: 15px;
+                        display: flex;    
+                        align-items: center;                  
+                        gap: 28px;
+                        font-size: 16px;
+
+                        & #price {
+                            color: #3B44F6;
+                            font-weight: 500;
+                        }
+
+                        & #free-download {
+                            color: #3B44F6;
+                            padding: 4px 10px;
+                            background-color: #D8DAFD;
+                            font-weight: 500;
+                        }
+
+                        & .discount {
+                            display: flex;
+                            align-items: center;
+
+                            & .percentage {
+                                padding: 3px;
+                                background-color: #FC326F33;
+                                color: #FC326F;
+                                border-radius: 4px 0px 0px 4px;
+                            }
+
+                            & .old-price {
+                                padding: 3px;
+                                background-color: #F0F0F0;
+                                color: #7D7D7D;
+                                border-radius: 0px 4px 4px 0px;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+    }
+
+    & .popular-games {
+        margin-top: 30px;
+
+        & .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+
+            & h1 {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            & a {
+                font-size: 18px;
+                font-weight: 500;
+                color: #3B44F6;
+            }
+        }
+
+        & #cards {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 54px;
+            max-width: 1280px;
+            flex-wrap: wrap;
+
+            & .game-card {
+                width: 262px;
+                height: 340px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0px 8px 10px #6b6b6b12;
+                border: 0.3px solid #ececec;
+
+                & img {
+                    padding: 16px;
+                }
+
+                & .infos {
+                    padding: 0px 16px 24px 16px;
+
+                    & #name {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    & .price {
+                        margin-top: 15px;
+                        display: flex;    
+                        align-items: center;                  
+                        gap: 28px;
+                        font-size: 16px;
+
+                        & #price {
+                            color: #3B44F6;
+                            font-weight: 500;
+                        }
+
+                        & #free-download {
+                            color: #3B44F6;
+                            padding: 4px 10px;
+                            background-color: #D8DAFD;
+                            font-weight: 500;
+                        }
+
+                        & .discount {
+                            display: flex;
+                            align-items: center;
+
+                            & .percentage {
+                                padding: 3px;
+                                background-color: #FC326F33;
+                                color: #FC326F;
+                                border-radius: 4px 0px 0px 4px;
+                            }
+
+                            & .old-price {
+                                padding: 3px;
+                                background-color: #F0F0F0;
+                                color: #7D7D7D;
+                                border-radius: 0px 4px 4px 0px;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .coming-soon {
+        color: white;
+        background-color: #0E0E0E;
+        
+        & h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 28px;
+            max-width: 1280px;
+            margin: auto;
+            padding: 24px;
+        }
+
+        & .content {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+
+            & .left {
+                & .l-first-image {
+                    position: relative;
+                    width: 633px; 
+                    height: 400px;
+                    background-image: url('../img/coming-soon/cod.svg');
+                    margin-bottom: 16px;
+
+                    & h2 {
+                        position: absolute;
+                        font-size: 28px;
+                        font-weight: 500;
+                        /* max-width: 342px; */
+                        padding: 210px 255px 112px 36px;
+                    }
+
+                    & button {
+                        position: absolute;
+                        padding: 9px 16px;
+                        background: transparent;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 1px solid #F5F4F9;
+                        border-radius: 8px;
+                        margin: 320px 453px 40px 36px;
+                        cursor: pointer;
+                        
+                    }
+                }
+
+                & .l-second-image {
+                    position: relative;
+                    width: 633px; 
+                    height: 400px;
+                    background-image: url('../img/coming-soon/nba2k22.svg');
+
+                    & h2 {
+                        position: absolute;
+                        font-size: 28px;
+                        font-weight: 500;
+                        /* max-width: 342px; */
+                        padding: 250px 255px 112px 36px;
+                    }
+
+                    & button {
+                        position: absolute;
+                        padding: 9px 16px;
+                        background: transparent;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 1px solid #F5F4F9;
+                        border-radius: 8px;
+                        margin: 320px 453px 40px 36px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            & .right {
+                margin-bottom: 80px;
+                & .r-first-image {
+                    position: relative;
+                    width: 447px; 
+                    height: 262px;
+                    background-image: url('../img/coming-soon/fifa23.svg');
+                    margin-bottom: 16px;
+
+                    & h2 {
+                        position: absolute;
+                        font-size: 28px;
+                        font-weight: 500;
+                        /* max-width: 342px; */
+                        padding: 99px 189px 95px 41px;
+                    }
+
+                    & button {
+                        position: absolute;
+                        padding: 9px 16px;
+                        background: transparent;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 1px solid #F5F4F9;
+                        border-radius: 8px;
+                        margin: 191px 262px 31px 41px;
+                        cursor: pointer;
+                    }
+                }
+
+                & .r-third-image {
+                    position: relative;
+                    width: 447px; 
+                    height: 262px;
+                    background-image: url('../img/coming-soon/alien.svg');
+
+                    & h2 {
+                        position: absolute;
+                        font-size: 28px;
+                        font-weight: 500;
+                        /* max-width: 342px; */
+                        padding: 99px 189px 95px 41px;
+                    }
+
+                    & button {
+                        position: absolute;
+                        padding: 9px 16px;
+                        background: transparent;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 1px solid #F5F4F9;
+                        border-radius: 8px;
+                        margin: 191px 262px 31px 41px;
+                        cursor: pointer;
+                    }
+                }
+
+                & .r-second-image {
+                    position: relative;
+                    width: 447px; 
+                    height: 262px;
+                    background-image: url('../img/coming-soon/resident-evil.svg');
+                    margin-bottom: 16px;
+
+                    & h2 {
+                        position: absolute;
+                        font-size: 28px;
+                        font-weight: 500;
+                        /* max-width: 342px; */
+                        padding: 99px 189px 95px 41px;
+                    }
+
+                    & button {
+                        position: absolute;
+                        padding: 9px 16px;
+                        background: transparent;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 1px solid #F5F4F9;
+                        border-radius: 8px;
+                        margin: 191px 262px 31px 41px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    & .user-review {
+        max-width: 986px;
+        margin: auto;
+        margin-top: 80px;
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 51px;
+            text-align: center;
+
+            & h1 {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 400;
+                max-width: 473px;
+            }
+        }
+
+        & .review-item {
+            display: flex;
+            gap: 27px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+
+            & .review-1{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 6px;
+                box-shadow: 0px 8px 10px #6b6b6b12;
+
+                & img {
+                    width: 90px;
+                    height: 90px;
+                    margin-bottom: 24px;
+                    margin: 32px 103px 24px 103px;
+                }
+
+                & .infos {
+                    margin: 0px 24px 32px 24px;
+                    text-align: center;
+
+                    & h3 {
+                        font-size: 20px;
+                        font-weight: 500;
+                         margin-bottom: 6px; 
+                    }
+
+                    & i {
+                        color: #EDAB00;
+                        margin-bottom: 6px;
+                    }
+
+                    & p {
+                        font-size: 14px;
+                        font-weight: 300;
+                        width: 249px;
+                    }
+                }
+            }
+
+            & .review-2{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 6px;
+                box-shadow: 0px 8px 10px #6b6b6b12;
+
+                & img {
+                    width: 110px;
+                    height: 110px;
+                    margin-bottom: 24px;
+                    margin: 32px 114px 24px 114px;
+                }
+
+                & .infos {
+                    margin: 0px 24px 32px 24px;
+                    text-align: center;
+
+                    & h3 {
+                        font-size: 24px;
+                        font-weight: 500;
+                         margin-bottom: 6px; 
+                    }
+
+                    & i {
+                        color: #EDAB00;
+                        margin-bottom: 6px;
+                    }
+
+                    & p {
+                        font-size: 15px;
+                        font-weight: 300;
+                        width: 249px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #0E0E0E;
+    color: white;
+
+    & .footer-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 192px;
+        padding: 50px 0px 88px 0px;
+
+        & .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 600;
+
+            & .content-items {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                
+                & a {
+                    color: #A0A0A0;
+                    font-size: 15px;
+                    font-weight: 350;
+                }
+            }
+        }
+
+        & .folow-us {
+            & p {
+                font-size: 18px;
+                font-weight: 550;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    & #copyright {
+        font-size: 15px;
+        font-weight: 400;
+        color: #A0A0A0;
+        text-align: center;
+        padding: 22px 0px 22px 0px;
+        border-top: 1px solid #FFFFFF0A;
+           
+    }
+}
